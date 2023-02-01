@@ -1,7 +1,7 @@
 package org.z7.graphs;
 
 abstract public class SimpleVertexPillar<C, THIS extends SimpleVertexPillar<C, THIS>> implements VertexPillar<C, THIS> {
-    protected Graph<THIS, Transition<THIS>> graph;
+    protected Graph<THIS, ? extends Transition<THIS>> graph;
 
     private C content;
 
@@ -13,7 +13,7 @@ abstract public class SimpleVertexPillar<C, THIS extends SimpleVertexPillar<C, T
         this.content = content;
     }
 
-    public void bindGraph(Graph<> graph) {
+    public void bindGraph(Graph<THIS, ? extends Transition<THIS>> graph) {
         this.graph = graph;
     }
 }
