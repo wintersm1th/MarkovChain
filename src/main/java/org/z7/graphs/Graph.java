@@ -1,9 +1,13 @@
 package org.z7.graphs;
 
-public interface Graph<C, T extends Transition> {
-    Vertex<C> createVertex();
+import java.util.List;
 
-    void addTransition(Transition transition);
+public interface Graph<V extends VertexPillar<?, V>, T extends Transition<V>> {
+    V createVertex();
 
-    void removeTransition(Transition transition);
+    void addTransition(T transition);
+
+    void removeTransition(T transition);
+
+    List<V> getAdjacentFor(V vertex);
 }

@@ -3,14 +3,16 @@ package org.z7.graphs;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import org.junit.jupiter.api.Assertions.*;
+import org.z7.graphs.transitions.WeightedTransition;
+
 class VertexTest {
 
     @Test
     public void contentTest() {
-        Graph g = new DirectedGraph<Integer, Integer>();
+        SimpleVertexFactory<Integer> vertexFactory = new SimpleVertexFactory<>();
+        Graph<SimpleVertex<Integer>, WeightedTransition<SimpleVertex<Integer>, Integer>> g = new DirectedGraph<>(vertexFactory);
 
-        Vertex<Integer> v = g.createVertex();
+        SimpleVertex<Integer> v = g.createVertex();
 
         Integer initialContent = 20;
 
