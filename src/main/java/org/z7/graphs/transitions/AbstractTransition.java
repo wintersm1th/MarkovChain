@@ -1,8 +1,6 @@
 package org.z7.graphs.transitions;
 
 import org.z7.graphs.Transition;
-import org.z7.graphs.SimpleVertex;
-import org.z7.graphs.Vertex;
 import org.z7.graphs.VertexPillar;
 
 public class AbstractTransition<V extends VertexPillar<?, ?>> implements Transition<V> {

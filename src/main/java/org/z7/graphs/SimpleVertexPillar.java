@@ -2,8 +2,8 @@ package org.z7.graphs;
 
 import java.util.List;
 
-abstract public class SimpleVertexPillar<C, THIS extends SimpleVertexPillar<C, THIS>> implements VertexPillar<C, THIS> {
-    protected Graph<THIS, ? extends Transition<THIS>> graph;
+abstract public class SimpleVertexPillar<C, CONCRETE extends SimpleVertexPillar<C, CONCRETE>> implements VertexPillar<C, CONCRETE> {
+    protected Graph<CONCRETE, ? extends Transition<CONCRETE>> graph;
 
     private C content;
 
@@ -15,11 +15,11 @@ abstract public class SimpleVertexPillar<C, THIS extends SimpleVertexPillar<C, T
         this.content = content;
     }
 
-    public void bindGraph(Graph<THIS, ? extends Transition<THIS>> graph) {
+    public void bindGraph(Graph<CONCRETE, ? extends Transition<CONCRETE>> graph) {
         this.graph = graph;
     }
 
-    public List<THIS> getAdjacent() {
-        return this.graph.getAdjacentFor((THIS) this);
+    public List<CONCRETE> getAdjacent() {
+        return this.graph.getAdjacentFor((CONCRETE) this);
     }
 }

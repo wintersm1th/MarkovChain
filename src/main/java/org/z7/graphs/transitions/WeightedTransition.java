@@ -1,9 +1,8 @@
 package org.z7.graphs.transitions;
 
-import org.z7.graphs.SimpleVertex;
 import org.z7.graphs.SimpleVertexPillar;
 
-public class WeightedTransition<V extends SimpleVertexPillar<?, ?>, W> extends AbstractTransition<V> {
+public class WeightedTransition<V extends SimpleVertexPillar<?, V>, W> extends AbstractTransition<V> {
     private final W weight;
 
     public WeightedTransition(V from, V to, W weight) {
