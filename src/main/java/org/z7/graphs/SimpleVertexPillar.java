@@ -1,5 +1,7 @@
 package org.z7.graphs;
 
+import java.util.List;
+
 abstract public class SimpleVertexPillar<C, THIS extends SimpleVertexPillar<C, THIS>> implements VertexPillar<C, THIS> {
     protected Graph<THIS, ? extends Transition<THIS>> graph;
 
@@ -15,5 +17,9 @@ abstract public class SimpleVertexPillar<C, THIS extends SimpleVertexPillar<C, T
 
     public void bindGraph(Graph<THIS, ? extends Transition<THIS>> graph) {
         this.graph = graph;
+    }
+
+    public List<THIS> getAdjacent() {
+        return this.graph.getAdjacentFor((THIS) this);
     }
 }
