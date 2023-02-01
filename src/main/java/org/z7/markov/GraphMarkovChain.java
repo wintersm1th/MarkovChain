@@ -1,8 +1,12 @@
 package org.z7.markov;
 
+import org.z7.markov.graphwrapper.MarkovGraph;
+import org.z7.markov.graphwrapper.MarkovVertex;
+
 import java.util.List;
 
 public class GraphMarkovChain<C> implements MarkovChain<C> {
+    MarkovGraph<C> baseGraph;
 
     public GraphMarkovChain() {
 
@@ -13,10 +17,6 @@ public class GraphMarkovChain<C> implements MarkovChain<C> {
     }
 
     public Boolean validate() {
-        return null;
-    }
-
-    public List<C> generateSequence(int length) {
         return null;
     }
 }
