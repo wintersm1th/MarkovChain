@@ -1,4 +1,6 @@
-package org.z7.graphs_simple.vertices;
+package org.z7.graphs_simplified;
+
+import org.z7.graphs_simplified.Vertex;
 
 public interface ContentVertex<C> extends Vertex {
     C getContent();

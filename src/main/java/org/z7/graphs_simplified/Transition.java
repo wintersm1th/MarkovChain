@@ -1,3 +1,3 @@
-package org.z7.graphs_simple.vertices;
+package org.z7.graphs_simplified;
 
 public interface Transition<V extends Vertex> { }

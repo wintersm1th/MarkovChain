@@ -1,7 +1,4 @@
-package org.z7.graphs_simple;
-
-import org.z7.graphs_simple.vertices.Transition;
-import org.z7.graphs_simple.vertices.Vertex;
+package org.z7.graphs_simplified;
 
 public interface Graph<V extends Vertex, E extends Transition<V>> {
     void addVertex(V vertex);
