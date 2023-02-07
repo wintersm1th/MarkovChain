@@ -5,6 +5,7 @@ class AbstractGraph<V extends Vertex, E extends Transition<V>> implements Graph<
     public void addVertex(V vertex) {
 
     }
+
     @Override
     public void addTransition(E transition) {
 

@@ -6,6 +6,7 @@ import org.z7.util.Pair;
 
 public class AbstractTransition<V extends Vertex> implements Transition<V> {
     protected Pair<V, V> vertices;
+
     public AbstractTransition(V from, V to) {
         vertices = new Pair<>(from, to);
     }
