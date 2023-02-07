@@ -16,6 +16,7 @@
         <module>modules/graphs</module>
         <module>modules/markov</module>
         <module>modules/util</module>
+        <module>modules/markov_app</module>
     </modules>
 
     <properties>

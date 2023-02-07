@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/markov_app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/markov_app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/modules/graphs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/modules/graphs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/modules/graphs_simplified/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/modules/graphs_simplified/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/modules/markov/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/modules/markov/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/markov_app/markov_site/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/markov_app/markov_site/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/markov_app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modules/markov_app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/modules/util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/modules/util/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/modules/utils/src/main/java" charset="UTF-8" />

@@ -13,6 +13,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="markov_app" target="18" />
+      <module name="markov_site" target="18" />
       <module name="utils" target="18" />
     </bytecodeTargetLevel>
   </component>
