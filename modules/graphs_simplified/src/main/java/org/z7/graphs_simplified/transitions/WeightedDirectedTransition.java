@@ -8,7 +8,7 @@ import org.z7.graphs_simplified.transitions.support.DirectedTransitionSupport;
 public class WeightedDirectedTransition<V extends Vertex, W>
         extends DirectedTransitionSupport<V>
         implements DirectedTransition<V>, WeightedTransition<W> {
-    W weight;
+    private final W weight;
 
     public WeightedDirectedTransition(V from, V to, W weight) {
         super(from, to);

@@ -8,12 +8,17 @@ import org.z7.graphs_simplified.transitions.support.UndirectedTransitionSupport;
 public class WeightedUndirectedTransition<V extends Vertex, W>
         extends UndirectedTransitionSupport<V>
         implements UndirectedTransition<V>, WeightedTransition<W> {
-    public WeightedUndirectedTransition(V from, V to) {
+
+    private final W weight;
+
+    public WeightedUndirectedTransition(V from, V to, W weight) {
         super(from, to);
+
+        this.weight = weight;
     }
 
     @Override
     public W getWeight() {
-        return null;
+        return weight;
     }
 }
