@@ -1,6 +1,5 @@
 package org.z7.graphs_simplified.transitions;
 
-import org.z7.graphs_simplified.transitions.support.AbstractTransition;
 import org.z7.graphs_simplified.DirectedTransition;
 import org.z7.graphs_simplified.Vertex;
 import org.z7.graphs_simplified.transitions.support.DirectedTransitionSupport;
