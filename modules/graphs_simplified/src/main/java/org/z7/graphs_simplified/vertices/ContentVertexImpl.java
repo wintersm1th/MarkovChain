@@ -1,6 +1,8 @@
 package org.z7.graphs_simplified.vertices;
 
-public class ContentVertexImpl<C> extends AbstractVertex implements org.z7.graphs_simplified.ContentVertex<C> {
+import org.z7.graphs_simplified.vertices.intf.ContentVertex;
+
+public class ContentVertexImpl<C> extends AbstractVertex implements ContentVertex<C> {
     C content;
 
     public C getContent() {
