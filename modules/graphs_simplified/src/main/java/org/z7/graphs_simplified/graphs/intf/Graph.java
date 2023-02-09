@@ -1,7 +1,7 @@
 package org.z7.graphs_simplified.graphs.intf;
 
-import org.z7.graphs_simplified.vertices.intf.Vertex;
 import org.z7.graphs_simplified.edges.intf.Edge;
+import org.z7.graphs_simplified.vertices.intf.Vertex;
 
 import java.util.List;
 
