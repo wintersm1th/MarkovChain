@@ -10,6 +10,7 @@
         <module name="graphs_simplified" />
         <module name="graphs" />
         <module name="util" />
+        <module name="markov_new" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
