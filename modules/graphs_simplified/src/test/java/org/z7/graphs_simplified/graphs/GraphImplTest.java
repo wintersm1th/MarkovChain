@@ -9,8 +9,6 @@ import org.z7.graphs_simplified.vertices.intf.Vertex;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class GraphImplTest {
     private GraphImpl<VertexImpl, EdgeImpl<VertexImpl>> g;
 
@@ -23,7 +21,7 @@ class GraphImplTest {
     void singleVertexTest() {
         VertexImpl begin = new VertexImpl();
 
-        g.addVertex(new VertexImpl());
+        g.addVertex(begin);
         List<? extends Vertex> transitions = g.getTransitionsFrom(begin);
 
         Assertions.assertNotNull(transitions);
@@ -37,6 +35,8 @@ class GraphImplTest {
 
         g.addVertex(first);
         g.addVertex(second);
+
+        g.addEdge(new EdgeImpl<>(first, second));
 
         List<? extends Vertex> firstAdjacent = g.getTransitionsFrom(first);
 
