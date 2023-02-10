@@ -10,7 +10,7 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.z7.graph_simplified</groupId>
+    <groupId>org.z7.graphs_simplified</groupId>
     <artifactId>graphs_simplified</artifactId>
     <version>1.0-SNAPSHOT</version>
 
