@@ -1,4 +1,4 @@
-package org.z7.markov_new.support;
+package org.z7.markov_new.support.graph_wrapping;
 
 import org.z7.graphs_simplified.vertices.ContentVertexImpl;
 import org.z7.graphs_simplified.vertices.intf.ContentVertex;

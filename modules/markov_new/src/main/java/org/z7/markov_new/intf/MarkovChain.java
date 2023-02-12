@@ -7,7 +7,7 @@ public interface MarkovChain<C> {
 
     void addTransition(MarkovState<C> from, MarkovState<C> to, Float probability);
 
-    void markStateAsInitial(MarkovState<C> state);
+    void setInitialState(MarkovState<C> state);
 
     List<C> generateChain();
 }

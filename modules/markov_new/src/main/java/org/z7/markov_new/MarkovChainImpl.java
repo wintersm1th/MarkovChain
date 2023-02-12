@@ -3,23 +3,38 @@ package org.z7.markov_new;
 import org.z7.markov_new.intf.MarkovChain;
 import org.z7.markov_new.intf.MarkovState;
 
-import org.z7.markov_new.support.MarkovGraph;
-import org.z7.markov_new.support.MarkovEdge;
-import org.z7.markov_new.support.MarkovVertex;
+import org.z7.markov_new.support.graph_wrapping.MarkovEdge;
+import org.z7.markov_new.support.graph_wrapping.MarkovGraph;
+import org.z7.markov_new.support.graph_wrapping.MarkovVertex;
+import org.z7.markov_new.support.selector.RandomSelector;
+import org.z7.markov_new.support.selector.RandomSelectorImpl;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.random.RandomGenerator;
 
 public class MarkovChainImpl<C> implements MarkovChain<C> {
-    private final RandomGenerator randomGenerator;
+    private final MarkovGraph<C> graph;
 
-    private final MarkovGraph<C> graph = new MarkovGraph<>();
+    private final Map<MarkovState<C>, MarkovVertex<C>> verticesStatesMapping;
 
-    Map<MarkovState<C>, MarkovVertex<C>> verticesStatesMapping;
+    private final RandomSelector randomSelector;
 
-    public MarkovChainImpl(RandomGenerator randomGenerator) {
-        this.randomGenerator = randomGenerator;
+    private MarkovState<C> initialState = null;
+
+    {
+        verticesStatesMapping = new HashMap<>();
+        graph = new MarkovGraph<>();
+    }
+
+    public MarkovChainImpl() {
+        this.randomSelector = new RandomSelectorImpl();
+    }
+
+    public MarkovChainImpl(RandomSelector randomSelector) {
+        this.randomSelector = randomSelector;
     }
 
     @Override
@@ -41,8 +56,8 @@ public class MarkovChainImpl<C> implements MarkovChain<C> {
     }
 
     @Override
-    public void markStateAsInitial(MarkovState<C> state) {
-
+    public void setInitialState(MarkovState<C> state) {
+        initialState = state;
     }
 
     @Override
