@@ -9,5 +9,5 @@ public interface MarkovChain<C> {
 
     void setInitialState(MarkovState<C> state);
 
-    List<C> generateChain();
+    List<C> generateChain(int maximalSize);
 }
