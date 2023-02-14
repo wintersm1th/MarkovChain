@@ -20,7 +20,7 @@ class MarkovChainImplTest {
     }
 
     @Test
-    void singleStateChainTest() {
+    public void singleStateChainTest() {
         final String message = "message";
         List<String> expectedChain = Arrays.stream(new String [] { message }).toList();
 
@@ -30,5 +30,24 @@ class MarkovChainImplTest {
         List<String> generatedChain = chain.generateChain(1);
 
         Assertions.assertIterableEquals(expectedChain, generatedChain);
+    }
+
+    @Test
+    public void twoSegmentChainTest() {
+        final String firstMessage = "first";
+        final String secondMessage = "second";
+
+        List<String> expectedChain = Arrays.stream(new String [] { firstMessage, secondMessage }).toList();
+
+        MarkovState<String> firstState = chain.createState(firstMessage);
+        MarkovState<String> secondState = chain.createState(secondMessage);
+
+        chain.addTransition(firstState, secondState, 1.0f);
+
+        chain.setInitialState(firstState);
+
+        List<String> generatedChain = chain.generateChain(2);
+
+        Assertions.assertEquals(expectedChain, generatedChain);
     }
 }
