@@ -6,7 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="markov" />
         <module name="graphs_simplified" />
         <module name="graphs" />
         <module name="util" />
@@ -14,6 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="markov" target="18" />
       <module name="markov_app" target="18" />
       <module name="markov_site" target="18" />
       <module name="utils" target="18" />
