@@ -41,6 +41,7 @@ public class MarkovChainImpl<C> implements MarkovChain<C> {
         MarkovStateImpl<C> state = new MarkovStateImpl<>(content);
 
         MarkovVertex<C> vertex = new MarkovVertex<>();
+        graph.addVertex(vertex);
         vertex.setContent(state);
 
         verticesStatesMapping.put(state, vertex);
