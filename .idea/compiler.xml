@@ -7,12 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="graphs_simplified" />
-        <module name="graphs" />
         <module name="util" />
         <module name="markov_new" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="graphs" target="18" />
       <module name="markov" target="18" />
       <module name="markov_app" target="18" />
       <module name="markov_site" target="18" />
